@@ -1,62 +1,64 @@
-<DOCTYPE html>
-	<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Hashcode</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div class="xbc">
-			<div class="header">
-				<div class="back">Cancel</div>
-				<div class="center"><img src="xbeLogo.png" alt="xbeLogo"></div>
-				<div class="forword">Save</div>
-			</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Edit Hashcookies</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">      
+        <header>
+            <div class="back"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;Cancle</div>
+            <div class="center "><img class="logo-img" src="./images/xbeLogo.png" alt="xbeLogo"></div>
+            <div class="forword">Save&nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i></div>
+        </header>
+        <div class="wrapper">
 
-			<div class="inputTypes">
-				<form action="">
-					<div class="profileEdit">
-						<div class="profileImg">
-							<img src="kirk.jpg" width="60" height="60" alt="Profile-img">
-						</div>
-						<div class="imgUpload">
-							<div class="inputbox name">
-								<label for="">Upload profile image</label><br>
-								<input type="file" name="name" value="">
-							</div>
-						</div>
-					</div>				
-
-					<div class="inputbox name">
-						<label for="">Name*</label><br>
-						<input type="text" name="name" value="Kirk Griffin" placeholder="Full name" required="required">
-					</div>
-					<div class="inputbox name">
-						<label for="">Admin?</label><br>
-						<input type="text" name="name" value="Yes, the user is an admin" placeholder="Write here" required="required">
-					</div>
-					<div class="inputbox name">
-						<label for="">Default contact*</label><br>
-						<select name="" id="">
-							<option value="email" selected="selected">Email address</option>
-							<option value="email">Mobile number</option>
-
-						</select>
-						
-					</div>
-					<div class="inputbox name">
-						<label for="">Email Address*</label><br>
-						<input type="email" name="name" value="kirk.griffin68@example.com" placeholder="Email address" required="required">
-					</div>
-					<div class="inputbox name">
-						<label for="">Mobile Number*</label><br>
-						<input type="text" name="name" value="(816)-413-3943" placeholder="Mobile number" required="required">
-					</div>
-				</form>				
-			</div>			
-		</div>
-		
+            <div class="pagetitle">
+                <div class="back" style="padding-left: 50px;"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;Cancle</div>
+            </div>
+            <div class="profile-img">
+                <img class="user-img" src="./images/kirk.jpg" alt="User-image">
+            </div>
+            <div class="inputfields">
+                <form action="post">
+                    <div class="inputbox ">
+                        <label for="file">Upload profile image</label><br>
+                        <input type="file" name="file" value="">
+                    </div>
+                    <div class="inputbox ">
+                        <label for="name">Name*</label><br>
+                        <input type="text" name="name" value="Kirk Griffin" placeholder="Full name" required="required">
+                    </div>
+                    <div class="inputbox name">
+                        <label for="admin">Admin?</label><br>
+                        <input type="text" name="admin" value="Yes, the user is an admin" placeholder="Write here" required="required">
+                    </div>
+                    <div class="inputbox ">
+                        <label for="contact">Default contact*</label><br>
+                        <select name="contact" >
+                            <option value="email" selected="selected">Email address</option>
+                            <option value="email">Mobile number</option>
+                        </select>
+                    </div>
+                    <div class="inputbox ">
+                        <label for="email">Email Address*</label><br>
+                        <input type="email" name="email" value="kirk.griffin68@example.com" placeholder="Email address" required="required">
+                    </div>
+                    <div class="inputbox ">
+                        <label for="mobile">Mobile Number*</label><br>
+                        <input type="text" name="mobile" value="(816)-413-3943" placeholder="Mobile number" required="required">
+                    </div>
+                    <div class="submitbtn">
+                        <br>
+                        <input type="submit" name="Update" value="Update">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -3,81 +3,108 @@
 	padding: 0px;
 	font-family: 'Roboto', sans-serif;
 }
-
 body{
 	background: #F3F3F4;
 }
-
-
+.box{
+	padding: 16px;
+	background: white;
+	border-radius: 2px;
+}
+.textgap{
+	margin: 12px 0px;
+	border-top: 1px solid #F1F9FF;
+}
+.headText{
+	font-size: 14px;
+	margin-bottom: 7px;
+}
 .textLabel{
 	font-size: 14px;
 	font-weight: 500;
 	opacity: 0.56;
 	margin-bottom: 5px;
 }
-
 .textDetails{
 	font-size: 16px;
 	font-weight: 400;
 }
-.yellowButton{
-	background: #FCF15F;
-	color: #B92822;
-	font-weight: 500;
-	font-size: 14px;
-	width: 70px;
-	height: 33px;
+
+
+
+.grid{
+	/*display: grid;*/
+}
+header{
+	width: 100%;
+	height: 70px;
+	background: #B92822;
+}
+
+@media screen and (min-width: 997px){
+
+	header .back{
+		display: none;
+	}
+	header .forword{
+		display: none;
+	}
+	.call, .text{
+		display: none;
+	}
+	
+}
+
+.logo-img{
+	margin: 14px;
+}
+.wrapper{
+	max-width: 1000px;
+	margin: 0px auto;
+}
+
+.pagetitle{
+	padding: 20px 0px 20px 0px;
+}
+.wrapper .pagetitle .back{
+	text-align: left;
+	display: inline-block;
+	position: absolute;
+}
+
+.wrapper .pagetitle .title{
 	text-align: center;
-	border-radius: 5px;
-	line-height: 33px;
-}
-.textgap{
-	margin: 12px 0px;
-	border-top: 1px solid #F1F9FF;
+	font-weight: 500;
+	font-size: 16px;
 }
 
-.box-shadow{
-	padding: 16px;
-	background: white;
-	border-radius: 2px;
-	-webkit-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.16);
-	-moz-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.16);
-	box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.16);
+.profile-img{
+	text-align: center;
+}
+.user-img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 0px auto;
 }
 
-.box{
-	padding: 16px;
-	background: white;
-	border-radius: 2px;
-}
-
-
-.xbc{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-areas: 
-	"header"
-	"profile"
-	"default"
-	"userDetails"
-	"map"	
-	;
-}
-
-.inputTypes{
-	margin: 10px 16px;
+.inputfields{
+	padding: 10px;
+	padding-left: 50px;
 }
 .inputbox{
 	margin-bottom: 16px;
+	display: inline-block;
+	max-width: 49%;
+	width: 100%;
 }
-.inputTypes label{
-	font-size: 12px;
+.inputbox label{
+	font-size: 14px;
 	line-height: 25px;
 }
 
-.inputTypes input, .inputTypes select{
-	width: 100%;
-	height: 48px;
+.inputbox input, .inputbox select{
+	width: 90%;
 	border-radius: 4px;
 	border: 1px solid #D4D4D4;
 	padding: 15px;
@@ -85,143 +112,35 @@ body{
 	font-size: 14px;
 }
 
-.header{
-	grid-area:header;
-	display: grid;
-	grid-template-columns: 1fr 88px 1fr;
-	grid-template-areas: 
-	"back center forword ";
-	width: 100%;
-	height: 50px;
-	background: #B92822;
+.inputbox select{
+	width: 97% !important;
 }
 
-.back{
-	grid-area: back;
-	color: white;
-	align-self: center;
-	justify-self: left;
-	padding: 0px 16px;
-}
-.center{
-	grid-area: center;
-	align-self: center;
-	justify-self: center;
-}
-.forword{
-	grid-area: forword;
-	color: #FCF15F;
-	align-self: center;
-	justify-self: right;
-	padding: 0px 16px;
-}	
 
-
-.profile{
-	grid-area:profile;
-	display: grid;
-	margin: 16px 16px;	
-	grid-template-columns: 50px 1fr 1fr;
-	grid-template-areas:
-	"profileImg username edit" ;
-}
-.profileEdit{
-	grid-area:profile;
-	display: grid;	
-	grid-template-columns: 70px 1fr;
-	grid-template-areas:
-	"profileImg imgUpload" ;
+.submitbtn{
+	text-align: right;
+	padding-right: 31px;
 }
 
-.profileImg{
-	grid-area: profileImg;
-	align-self: center;
-	justify-self: center;
-
-}
-.profileImg img{
-	border-radius: 50%;
-}
-.imgUpload{
-	grid-area: imgUpload;
-}
-.username{
-	grid-area: username;
-	align-self: center;
-	font-size: 20px;
-	font-weight: 500;
-}	
-.edit{
-	grid-area: edit;
-	align-self: center;
-	justify-self: right;
-}
-
-.default{
-	grid-area:default;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas:
-	"defaultContact contactButton";
-	margin: 10px 16px;
-	
-}
-	.defaultContact{
-		grid-area: defaultContact;
-	}
-	.contactButton{
-		grid-area: contactButton;
-		align-self: center;
-	justify-self: right;
-	}
-
-.userDetails{
-	grid-area:userDetails;
-	margin: 10px 16px;
-}
-
-.headText{
+.submitbtn input{
+	background: #FCF15F;
+	color: #B92822;
+	border: none;
+	padding: 14px 42px;
 	font-size: 14px;
-	margin-bottom: 7px;
-}
-
-.mobile{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas:
-	" number call   text";
-}
-
-	.number{
-		grid-area: number;
-	}
-	.call{
-		grid-area: call;
-		align-self: end;
-	justify-self: right;
-	}
-	.text{
-		grid-area: text;
-		align-self: end;
-	justify-self: right;
-	}
-
-.map{
-	grid-area:map;
-	padding: 10px 16px;
-	/* margin: 10px 16px; */
-}
-
-.map img{
-width: 100%;
+	font-weight: 500;
+	border-radius: 5px;
 }
 
 .documentation{
 	padding: 10px 16px;
+	margin: 0px auto;
 }
 
 .history{
 	padding: 10px 16px;
+	max-width: 1000px;
+	margin: 0px auto;
 }
 
 .timecardStatus{
@@ -242,23 +161,186 @@ width: 100%;
 	padding-top: 7px;
 }
 
-@media screen and (min-width: 735px){
-
-	.header{
-	grid-template-columns:1fr;
-	grid-template-areas:"center";
+.deskprofileview{
+	padding: 16px;
+	background: white;
+	border-radius: 2px;
 }
 
-.back{
-	grid-area: back;
-	display: none;
-	color: white;
+.profile{
+	display: grid;
+	margin: 16px 16px;	
+	grid-template-columns: 100px 1fr 1fr;
+	grid-template-areas:
+	"profileImg username edit" ;
+}
+.profileImg{
+	grid-area: profileImg;
 	align-self: center;
-	justify-self: center;
-	padding: 0px 16px;
+	justify-self: left;
+}
+
+.profileImg img{
+	border-radius: 50%;
+}
+.username{
+	grid-area: username;
+	align-self: center;
+	font-size: 20px;
+	font-weight: 500;
+}	
+.edit{
+	grid-area: edit;
+	font-weight: 500;
+	align-self: top;
+	justify-self: right;
+	opacity: .54;
+}
+.default{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"defaultContact contactButton";
+	margin: 10px 16px;
+	
+}
+.defaultContact{
+	grid-area: defaultContact;
+}
+.defaultContact .email{
+	width: 11em; 
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+}
+.contactButton{
+	grid-area: contactButton;
+	align-self: center;
+	justify-self: right;
+}
+
+.yellowButton{
+	background: #FCF15F;
+	color: #B92822;
+	font-weight: 500;
+	font-size: 14px;
+	width: 70px;
+	height: 33px;
+	text-align: center;
+	border-radius: 5px;
+	line-height: 33px;
+}
+
+.mobile{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+	" number call   text";
+}
+
+.number{
+	grid-area: number;
+}
+.call{
+	grid-area: call;
+	align-self: end;
+	justify-self: right;
+}
+.text{
+	grid-area: text;
+	align-self: end;
+	justify-self: right;
+}
+.map img{
+	width: 100%;
+}
+
+.imgmap{
+	background: url('./images/map.png');
+	width: 100%;
+	height: 200px;
+	color: white;
+	font-weight: 500;
+	text-align: center;
+	line-height: 200px;
+}
+.userDetails, .map {
+	margin-top: 16px;
 }
 
 
+@media screen and (max-width: 996px){
 
 
+	header{	
+		display: grid;
+		grid-template-columns: 1fr 100px 1fr;
+		grid-template-areas: 
+		"back center forword ";
 	}
+
+	.back{
+		grid-area: back;
+		color: white;
+		align-self: center;
+		justify-self: left;
+		padding: 0px 16px;
+	}
+	.center{
+		grid-area: center;
+		align-self: center;
+		justify-self: center;
+	}
+	.forword{
+		grid-area: forword;
+		color: #FCF15F;
+		align-self: center;
+		justify-self: right;
+		padding: 0px 16px;
+	}
+
+
+	.pagetitle .back, .pagetitle{
+		display: none;
+	}
+
+	.inputfields{
+		padding-left: 4%;
+	}
+	.inputbox{
+		margin-bottom: 16px;
+		display: inline-block;
+		max-width: 100%;
+		width: 100%;
+	}
+	.inputbox label{
+		font-size: 12px;
+		line-height: 25px;
+	}
+
+	.submitbtn{
+		display: none;
+	}
+	.deskprofileview{
+		background: none;	
+	}
+
+	.default{
+		margin: 0px;
+		background: white;
+		padding: 16px;
+		-webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.16);
+		-moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.16);
+		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.16);
+	}
+	.edit{
+		align-self: center;
+	}
+	
+	.userDetails, .map, .deskprofileview{
+		padding: 0px 16px;
+	}
+	.profile-img{
+		padding-top: 20px;
+	}	
+}
